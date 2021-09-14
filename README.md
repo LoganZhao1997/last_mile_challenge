@@ -1,6 +1,7 @@
 # Amazon Last-Mile Challenge
 
 Code maintainer： Wentao Zhao (wz2543@columbia.edu)
+
 Code contributors: Chen Jing, Yunhao Xing, Wentao Zhao
 
 This code is for the [Amazon last-mile research challenge](https://routingchallenge.mit.edu/). 
