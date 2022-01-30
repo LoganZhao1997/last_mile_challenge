@@ -1,10 +1,3 @@
-# ******************************************************************************
-# Fixed modules for encoder and decoder：
-#   dotproduct/attentionhead/multi-head attn/layerNorm/BatchNorm还没写
-#   
-#
-# ******************************************************************************
-
 import math
 import torch
 import torch.nn as nn
@@ -91,10 +84,10 @@ class ContextEmbed(nn.Module):
         self.placeholder = torch.randn_like([1,d_feature])
         self.project = nn.Linear(3*d_feature,d_feature)
     def forward(self,x,t):
-        #输出context_embed vector
-        graph_embed = x.mean(-1) #应该是
+        # output context_embed vector
+        graph_embed = x.mean(-1) 
         if t ==1:
-            hidden_context = graph_embed+placeholder+placeholder #其实是concat
+            hidden_context = graph_embed+placeholder+placeholder 
         else:
             hidden_context = graph_embed+previous_node+first_node
         out = project(hidden_context)
